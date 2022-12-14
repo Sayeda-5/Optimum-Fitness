@@ -1,0 +1,120 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+
+
+
+.d-flex{
+    display: flex;
+}
+
+.vh-100{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.login-img{
+    width: 50%;
+}
+
+.login-img img{
+    width: 100%;
+}
+
+.forms-div{
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: aliceblue;
+}
+
+.forms-div h1{
+    font-size: 30px;
+}
+
+.login-input{
+    text-align: left;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.login-input input{
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    margin-top: -5px;
+    width: 80%;
+}
+
+.bd{
+    font-weight: bold;
+}
+
+.txt-size{
+    font-size: 20px;
+}
+
+.btn{
+    height: 50px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 40px 0 10px 0;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(38,42,59);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    color: black;
+    background-color: orange;
+}
+
+.sign-a{
+    color: rgb(38, 42, 59);
+    font-weight: bold;
+
+}
+
+@media (max-width: 1000px) {
+    .vh-100{
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+    
+    }
+
+    .login-input{
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .d-flex{
+        display: block;
+    }
+
+    .login-img{
+        width: 80%;
+        margin: auto;
+    }
+
+    .forms-div{
+        width: 80%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: aliceblue;
+    }
+}

@@ -1,0 +1,187 @@
+.txt-cnt {
+  text-align: center;
+  margin: 40px 0;
+}
+
+form{
+  width: 100%;
+}
+
+.register-column {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  background-color: aliceblue;
+  z-index: -1;
+}
+
+.register-detail {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.typespan {
+  width: 80%;
+  display: flex;
+  gap: 20px;
+}
+
+.typespan input {
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border-color: rgba(0, 0, 0, 0.477);
+  font-size: 18px;
+  margin-top: 5px;
+  width: 80%;
+}
+
+.typespan input::placeholder {
+  font-size: 20px;
+}
+
+.bd {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.typespan input:focus {
+  outline-color: grey;
+}
+
+.type-label {
+  text-align: left;
+  width: 30%;
+}
+
+.form-check-input {
+  display: flex;
+  width: 20%;
+}
+
+.privacy{
+    display: flex;
+    width: 100%;
+}
+
+.form-check-input label {
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+#register-select {
+  height: 50px;
+  display: none;
+}
+
+.form-select-date {
+  text-align: left;
+}
+
+.form-select-date label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#select_days {
+  width: 80px;
+  height: 40px;
+  padding-left: 20px;
+}
+
+#select_month {
+  width: 150px;
+  height: 40px;
+  padding-left: 20px;
+}
+
+#select_year {
+  width: 100px;
+  margin-top: -1px;
+  border: 1px solid black;
+}
+
+.slct select {
+  width: 80px;
+  height: 40px;
+  padding-left: 20px;
+}
+
+.mrht{
+    margin-right: 10px;
+}
+
+.tos{
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+
+.org{
+    color: orangered;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tos p{
+    line-height: 25px;
+}
+
+.tos input{
+    width: 40px;
+}
+
+.btn{
+    height: 50px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 20px 0 40px 0;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(38,42,59);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    color: black;
+    background-color: orange;
+}
+
+.org a{
+    text-decoration: none;
+    color: orange;
+    margin: 40px 0;
+}
+
+.mgn{
+    margin-top: 30px;
+}
+
+@media (max-width: 930px) {
+
+  .register-column{
+    width: 80%;
+  }
+
+  .form-check-input input{
+    width: 50px;
+  }
+
+}
+
+@media (max-width: 540px) {
+
+  .register-column{
+    width: 100%;
+  }
+
+  .form-check-input input{
+    width: 50px;
+  }
+
+}

@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 252, 246);
+  font-family: 'Work Sans', sans-serif;
+  background-image: url(https://cdn1.cronometer.com/brand2/assets/DotPatternLarge.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#header {
+  height: 90px;
+  background-color: rgb(38, 42, 59);
+  width: 100%;
+}
+
+#logo {
+  width: 20%;
+}
+
+#logo a img {
+  height: 50px;
+  margin: 20px 0 0 40px;
+}
