@@ -1,0 +1,27 @@
+### get users
+GET https://ox-coveralls.cyclic.app/users
+
+### post register a new user
+
+POST  https://ox-coveralls.cyclic.app/user/register
+Content-Type: application/json
+
+{
+  "username": "ichi09",
+  "firstname": "ichigo",
+  "lastname": "kurosaki",
+  "email": "ichi@mail.com",
+  "password": "bankai",
+  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/762.jpg",
+  "userLevel": 4
+}
+
+### post login a new user
+
+POST https://ox-coveralls.cyclic.app/user/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
