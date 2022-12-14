@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/signup.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Work+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>Cronometer : Create your free account</title>
+</head>
+
+<body>
+
+    <!-- Header is appended here -->
+    <div id="header"></div>
+
+    <div class="txt-cnt bd">
+        <h1>Create Your Free Account</h1>
+    </div>
+
+    <!-- Registration form started -->
+
+    <form align="center">
+        <!-- All input tags done -->
+        <div class="register-column">
+            <div class="register-detail">
+                <div class="type-label">
+                    <p class=" bd">Email</p>
+                </div>
+                <div class="typespan">
+                    <input type="email" placeholder="Email address" name="email" autocomplete="username" id="signup_email" required>
+                </div>
+            </div>
+            <div class="register-detail">
+                <div class="type-label">
+                    <p class=" bd">Username</p>
+                </div>
+                <div class="typespan">
+                    <input type="text" placeholder="username" name="username" autocomplete="username" id="signup_username" required >
+                </div>
+            </div>
+            <div class="register-detail">
+                <div class="type-label">
+                    <p class=" bd">Password</p>
+                </div>
+                <div class="typespan">
+                    <input type="password" placeholder="Password" name="email" autocomplete="username" id="signup_password"required>
+                </div>
+            </div>
+        </div>
+
+        <!--  Your Body Type Section Starts-->
+        <div class="register-column">
+            <h2> Your Body Type</h2>
+
+            <div class="register-detail">
+
+                <div class="type-label">
+                    <p class="bd">Sex</p>
+                </div>
+
+                <div class="typespan">
+                    <div class="form-check-input">
+                        <input type="radio" name="gender" value="male" required>
+                        <label>Male</label>
+                    </div>
+                    <div class="form-check-input">
+                        <input type="radio" name="gender" value="female" required>
+                        <label>Female</label>
+                    </div>
+                    <div class="form-check-input">
+                        <select id="register-select">
+                            <option value=""></option>
+                            <option value="pregnant">Pregnant</option>
+                            <option value="breastfeeding">Breastfeeding</option>
+                        </select>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="register-detail">
+                <div class="type-label">
+                    <p class="bd">Birthday</p>
+                </div>
+                <div class="typespan">
+                    <div class="form-select-date">
+                        <label>Day</label>
+                        <select name="days" id="select_days" required>
+
+                        </select>
+                    </div>
+                    <div class="form-select-date">
+                        <label>Month</label>
+                        <select name="days" id="select_month" required>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                    <div class="form-select-date">
+                        <label>Year</label>
+                        <input type="number" value="2020" id="select_year" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-detail">
+                <div class="type-label">
+                    <p class="bd">Height</p>
+                </div>
+                <div class="typespan">
+                    <div class="form-select-date slct">
+                        <label>ft</label>
+                        <select id="height_ft" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected="selected">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <div class="form-select-date slct">
+                        <label>in</label>
+                        <select id="height_in" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected="selected">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-detail">
+                <div class="type-label">
+                    <p class="bd">Weight</p>
+                </div>
+                <div class="typespan">
+                    <div class="form-check-input">
+                        <input class="mrht" type="number" min="1" max="200" name="weight" id="weight_kg" value="50">
+                        <label class="mlft">kg</label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="register-column">
+            <h2>Terms of Service & Privacy Settings</h2>
+            <div class="tos">
+                <div class="privacy">
+                    <input id="check_all" class="mrht" type="checkbox">
+                    <p>Check All</p>
+                </div>
+
+                <p><b> By checking the box below you are indicating you have read and agree to our <span class="org">
+                            Terms of Service</span> and <span class="org"> Privacy Policy</span>.</b></p>
+
+                <div class="privacy">
+                    <input id="Tos_pp" class="mrht" type="checkbox" required>
+                    <p>I agree to the Cronometer Terms of Service and Privacy Policy.</p>
+                </div>
+
+                <p><b>In order to give you the best experience using Cronometer, we need certain data permissions.
+                        (These are optional and can be updated in your settings any time.)</b></p>
+
+                <div class="privacy">
+                    <input id="receive_email" class="mrht" type="checkbox" required>
+                    <p>I agree to receive Cronometer newsletter and promotional emails. (You can opt out at any time.)
+                    </p>
+                </div>
+
+                <div class="privacy">
+                    <input id="personalized" class="mrht" type="checkbox" required>
+                    <p>I agree to receive personalized in-app ads.
+                        (You will receive less relevant, non-personalized ads if you opt out)</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="org bd mgn">
+            <p><a href="login.html"> Already have an account ?</a></p>
+        </div>
+
+        <input id="sb_form" class="btn" type="submit" value="Sign Up">
+
+    </form>
+
+
+    <script type="module" src="./script/signup.js"></script>
+
+
+</body>
+
+</html>
