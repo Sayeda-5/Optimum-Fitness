@@ -5,28 +5,25 @@
     font-weight: bold;
     font-style: bold; 
 }
-
 * {
     font-size: 20px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 body {
     min-height: 100vh;
-    background: var(--bg-primary);
 }
 
 nav {
-    position: fixed;
-    width: 60px;
+    position: relative;
+    width: 4%;
     height: 100%;
     background: var(--bg-secondary);
     transition: .5s;
-    overflow: hidden;
+    overflow: scroll;
+    border-radius: 0px 20px 0px 0px;
 }
 
 nav.active {
@@ -34,11 +31,11 @@ nav.active {
 }
 
 nav:hover {
-    width: 300px;
+    width: 20%;
 }
 
 nav ul {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -47,7 +44,7 @@ nav ul {
 nav ul li {
     list-style: none;
     width: 100%;
-    position: relative;
+    /* position: relative; */
 
 }
 
@@ -146,11 +143,74 @@ header {
     --cl-text: #fddb3a;
 }
 #top-box{
-    border: 1px solid white;
-    display: flex;
-    margin: auto;
-    justify-content: space-evenly;
-    width: 60%;
     height: 200px;
+    width: 100%;
+    padding:20px;
+}
+
+.body-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.diary-card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    list-style: none;
+    
+}
+
+.divider{
+    margin: 10px 0px;
+    color: grey;
+}
+
+.selected-foods{
+    height: 150px;
+    overflow-y: scroll;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+   
+}
+
+.selected-foods>div{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+     
+}
+.nutrients{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
 
 }
+.nutrient-card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-flex{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    width: 100%;
+}
+#food-menu, select{
+   height: 40px;  
+   text-align: center;  
+   background-color: #52575d;
+   color: #e3a72f; 
+   border-radius: 10px;        
+}
+                    
