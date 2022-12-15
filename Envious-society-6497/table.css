@@ -1,0 +1,44 @@
+/* -------------------------------- 
+
+💡 How to make the table header sticky in CSS
+🔗 https://codyhouse.co/nuggets/sticky-table-header
+
+-------------------------------- */
+
+table {
+    width: 100%;
+    /* margin: 0 auto; */
+  
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f1f1f1;
+
+  }
+  
+  th, td { /* cell */
+    padding: 8px 0.75rem;
+    font-size: 0.9375rem;
+
+  }
+  
+  th { /* header cell */
+    font-weight: 700;
+    text-align: left;
+    color: #272838;
+    border-bottom: 2px solid #EB9486;
+    position: sticky;
+    top: 0;
+    background-color: #F9F8F8;
+  }
+  
+  td { /* body cell */
+    color: #7E7F9A;
+  }
+  
+ 
