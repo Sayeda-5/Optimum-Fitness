@@ -8,6 +8,14 @@ body{
     margin: auto;
 }
 
+.container a{
+    display: block;
+    margin-top: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #005c5c;
+}
+
 .navbar{
     height: 56px;
     background-color: #fafbff;
@@ -37,6 +45,24 @@ body{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
 
+}
+
+.fifth{
+    width: 100%;
+    margin: 40px auto;
+    padding: 30px 20px 30px 20px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.fifth>div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight:lighter;
 }
 
 .first>div:nth-child(2)>img,.second>div:nth-child(2)>img,.third>div:nth-child(2)>img,.fourth>div:nth-child(2)>img{
