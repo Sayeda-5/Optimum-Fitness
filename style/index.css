@@ -1,5 +1,54 @@
 body {
-    margin: 50px auto;
+    margin: 50px ,auto;
     padding: 15px;
 
+}
+#logo{
+    width: 50px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+}
+#top{
+    display: flex;
+    justify-content: space-around;
+}
+.par{
+    text-align: center;
+}
+
+#top-div{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.top-img{
+    width: 100px;
+}
+#store>div>a>img{
+    width: 200px;
+}
+#store>div{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#six>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+#mid2-img{
+    /* width: 500px; */
+    align-items: center;
+}
+.tick{
+    width: 50px;
+}
+#mid2>div>div{
+    /* background-color: black; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
 }
