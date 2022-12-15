@@ -97,16 +97,15 @@ checkAll.addEventListener("change", () => {
 
 let form = document.querySelector("form");
 
-let URL = "https://frantic-handkerchief-frog.cyclic.app/";
+let URL = "https://639ad46531877e43d677befe.mockapi.io/optimumfitness/users";
 
 form.addEventListener("submit", async (e) => {
-  
   e.preventDefault();
 
   let email = form.signup_email.value;
   let username = form.signup_username.value;
   let password = form.signup_password.value;
-  let gender = document.querySelectorAll('form input[name="gender"]');
+  let gender = selectedValue;
   let date = form.select_days.value;
   let month = form.select_month.value;
   let year = form.select_year.value;
@@ -116,21 +115,29 @@ form.addEventListener("submit", async (e) => {
 
   //Checking password logic
 
-  if(password.length<8){
-    alert('Password should be at least 8 character');
+  if (password.length < 8) {
+    alert("Password should be at least 8 character");
     return;
   }
 
-  let count=0;
+  let count = 0;
 
-  for(let i=0; i<password.length; i++){
-    if(password[i]=="@" || password[i]=="&" || password[i]=="*" || password[i]=="%" || password[i]=="." || password[i]=="#" || password[i]=="!"){
+  for (let i = 0; i < password.length; i++) {
+    if (
+      password[i] == "@" ||
+      password[i] == "&" ||
+      password[i] == "*" ||
+      password[i] == "%" ||
+      password[i] == "." ||
+      password[i] == "#" ||
+      password[i] == "!"
+    ) {
       count++;
     }
   }
 
-  if(count==0){
-    alert('Password should contain at least one special character');
+  if (count == 0) {
+    alert("Password should contain at least one special character");
     return;
   }
 
@@ -140,10 +147,14 @@ form.addEventListener("submit", async (e) => {
     username,
     email,
     password,
+    gender,
+    DOB: `${date} ${month} ${year}`,
+    height: [feet,inch],
+    weight,
   };
 
   try {
-    let res = await fetch(`${URL}user/register`, {
+    let res = await fetch(URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -151,12 +162,12 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(obj),
     });
 
-    if(res.ok){
-
-    }else{
-
+    if (res.ok) {
+      alert("Successfully signed up");
+      window.location.href = "login.html";
+    } else {
+      alert(`Server says ${res.status} error`);
     }
-
   } catch (err) {
     console.log(err);
   }
