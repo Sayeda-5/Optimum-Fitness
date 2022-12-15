@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Work+Sans:wght@300&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Cronometer Login</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
@@ -30,14 +31,14 @@
                 <h1>Welcome Back</h1>
                 <div class="login-input">
                     <p class="bd txt-size">Username</p>
-                    <input type="text" name="username" placeholder="Enter your username" id="" required>
+                    <input type="text" name="username" placeholder="Enter your username" id="login_username" required>
                 </div>
                 <div class="login-input">
                     <p class="bd txt-size">Password</p>
-                    <input type="password" name="userPassword" placeholder="Password" id="" required>
+                    <input type="password" name="userPassword" placeholder="Password" id="login_password" required>
                 </div>
                 <input class="btn" type="submit" value="LOG IN">
-                <p class="bd" style="cursor: pointer; color: orange;">Forget your password?</p>
+                <p class="bd" id="fgt_pass" style="cursor: pointer; color: orange;">Forget your password?</p>
                 <p>Not a member?</p>
                 <p><a class="sign-a" href="signup.html">Sign Up</a></p>
       
@@ -46,6 +47,17 @@
           </div>
         </div>
       </section>
+
+      <div class="modals">
+        <div id="ent_email" class="end">
+          <i id="close_pass" class="fa-solid fa-xmark point"></i>
+          <div class="cnt">
+            <h2 >Enter the Email associated with your account:</h2>
+            <input type="email" placeholder="Enter your email" id="">
+            <button>Reset Password</button>
+          </div>
+        </div>
+      </div>
 
     <script type="module" src="./script/login.js"></script>
 </body>
