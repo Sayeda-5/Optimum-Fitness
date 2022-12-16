@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="sidebar.css" />
     <link rel="stylesheet" type="text/css" href="table.css" />
+    <link rel="stylesheet" type="text/css" href="bmi.css" />
 </head>
 <body>
     
@@ -75,6 +76,7 @@
 
     <div id = "top-box">
         <div class="diary-card">
+            <div id="outer-tab">
             <div class="tab-menu">
                 <select id="food-menu">
                     
@@ -88,7 +90,9 @@
                 <select>
                     <option> Note</option>
                 </select>
-                
+            </div> 
+            <div class="delete-icon-div" onclick="clearData()"><img class = "delete-icon" src = "./assets/png/delete.png"/>
+            </div>
             </div><hr class="divider"/>
             <div class="selected-foods">
               
@@ -96,6 +100,29 @@
         </div>
 
         <br/>
+        <div class="chart-section">
+        <div class="chart-card-1">
+        </div>
+        <div class="chart-card-2">
+            <h5>Calculate your BMI</h5><br>
+                   
+                      <div class="card-input">
+                        <label for="cardNumber" class="card-input__label">Height (in cm)</label>
+                        <input type="number"  id="height" class="card-input__input">
+                        <p id="error-height"></p>
+                      </div>
+                      <div class="card-input">
+                        <label for="cardName" class="card-input__label">Weight (in kg)</label>
+                        <input type="number"  id="weight" class="card-input__input">
+                        <p id="error-weight"></p>
+                      </div>
+                      <p id="bmi-result"></p>
+                      <button class="card-form__button" id="calculate-bmi" onclick="calculateBMI()">
+                        Calculate
+                      </button>
+              </div>
+    </div>
+<br/>
 
         <div class="nutrient-card">
             <h5>Nutrients Targets</h5><br><br>
@@ -113,9 +140,9 @@
 
 </body>
 </html>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <script src="foodJson.js"></script>
 <script src="nutrientsJson.js"></script>
-
+<script src="charts.js"></script>
 <script src="sidebar.js"></script>
 <script src="food.js"></script>

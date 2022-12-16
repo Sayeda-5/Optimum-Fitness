@@ -213,4 +213,68 @@ ul li{
    color: #e3a72f; 
    border-radius: 10px;        
 }
-                    
+
+.chart-card-1{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    height: 330px;
+}
+
+.chart-card-2{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    height: 330px;
+}
+
+.chart-section{
+    display: flex;
+    gap:20px;
+    flex-direction: row;
+    width: 100%;
+}
+
+.no-data-img{
+    height: 300px;
+    width: 300px;
+}
+    
+.no-data-div{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+}
+#outer-tab{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.tab-menu{
+    width: fit-content;
+}
+.delete-icon{
+    height: 20px;
+    transition-property: height;
+    transition-duration: 4s;
+    transition-delay: 2s;
+}
+.delete-icon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 20%;
+}
+
+.delete-icon:hover{
+    height: 25px;
+}
