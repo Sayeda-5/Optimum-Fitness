@@ -11,6 +11,7 @@ foods.forEach((food)=>{
 })
 
 selectedFoodTable([])
+chartDisplay();
 
 
 options.addEventListener("change", foodAddition)
@@ -20,9 +21,17 @@ function foodAddition(e){
     if(data.length>0 && data.some(item => item.id === obj.id)){
         let index = data.findIndex(item=>item.id===obj.id)
         data[index].alteredQuantity = data[index].alteredQuantity+obj.quantity
+        data[index].dynamicQuantity = data[index].alteredQuantity/obj.quantity
+        data[index].nutrient_data.forEach(item=>{
+            item.altered_value = item.value * data[index].dynamicQuantity.toFixed(2)
+        })
     }
     else{
     obj.alteredQuantity = obj.quantity
+    obj.dynamicQuantity = 1
+    obj.nutrient_data.forEach(item=>{
+        item.altered_value = (item.value * obj.dynamicQuantity).toFixed(2)
+    })
     data.push(obj)
     }
     postFood()
@@ -41,35 +50,89 @@ async function postFood(){
      resData.then((res)=>{
         selectedData = JSON.parse(res.data)
         selectedFoodTable(selectedData);
-        const collectedNutrients = []
-        let selectedNutrients=[]
-        selectedData.forEach(elem=>{
-            collectedNutrients.push(...elem.nutrient_data)
-        })
-       collectedNutrients.forEach(item=>{
-            if(!selectedNutrients.some(obj=>obj.nutrient===item.nutrient)){
-                selectedNutrients.push(item)
-            }
-            else{
-                let index = selectedNutrients.findIndex(obj=>obj.nutrient===item.nutrient)
-                let object = {
-                    nutrient: item.nutrient,
-                    value: item.value + selectedNutrients[index].value
-                }
-                selectedNutrients[index] = object;
-            }
-        })
-        nutrients.forEach(item=>collectedNutrients.forEach(elem=>{
-            if(item.id===elem.nutrient){
-                item.value = elem.value
-                console.log(item.description, elem.value)
-            }
-        }))
-        console.log(nutrients)
-        
-        nutrientsTable()
+        addToNutrientsSummary(selectedData);
+        chartDisplay();
      })
 }
+
+function chartDisplay(){
+    let energyValue = nutrients.find(item=>item.id==="urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9").value??0
+
+    document.querySelector(".chart-card-1").innerHTML=energyValue?`<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+`:"<div class='no-data-div'><img src='./assets/png/no-data.png' class='no-data-img'></div>"
+var yValues = [];
+var xValues = [];
+if(energyValue && energyValue<=2258){
+    yValues.push(Number(energyValue).toFixed(2))
+    yValues.push(Number(2258-energyValue).toFixed(2))
+    xValues.push("Consumed KCal")
+    xValues.push("Remaining KCal")
+}
+if(energyValue && energyValue>2258){
+    yValues.push(Number(energyValue).toFixed(2))
+    xValues.push("Consumed KCal")
+}
+
+var barColors = [
+  "#b91d47",
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    // title: {
+    //   display: true,
+    //   text: "World Wide Wine Production 2018"
+    // }
+  }
+});
+
+
+}
+
+function addToNutrientsSummary(selectedData){
+    const collectedNutrients = []
+    let selectedNutrients=[]
+    selectedData.forEach(item=>{
+        item.nutrient_data.forEach(elem=>{
+            for(let i=0; i<item.dynamicQuantity; i++){
+            collectedNutrients.push(elem)
+            }
+        })
+    })
+   collectedNutrients.forEach(item=>{
+        if(!selectedNutrients.some(obj=>obj.nutrient===item.nutrient)){
+            selectedNutrients.push(item)
+        }
+        else{
+            let index = selectedNutrients.findIndex(obj=>obj.nutrient===item.nutrient)
+            let object = {
+                nutrient: item.nutrient,
+                value: item.value + selectedNutrients[index].value
+            }
+            selectedNutrients[index] = object;
+        }
+    })
+    nutrients.forEach(item=>selectedNutrients.forEach(elem=>{
+        if(item.id===elem.nutrient){
+            item.value = elem.value;
+        }
+    }))     
+    if(data.length===0){
+        nutrients.forEach(item=>{
+            item.value=0
+        })
+    }   
+    nutrientsTable();
+}
+
 nutrientsTable()
 
 
@@ -80,7 +143,7 @@ function selectedFoodTable(foods){
     ${foods.map((elem)=>{
         return ` <tr>
         <td>${elem.description}</td>
-        <td>${Math.max(...elem.nutrient_data.map(obj=>obj.value))}</td>
+        <td>${Math.max(...elem.nutrient_data.map(obj=>obj.altered_value))}</td>
         <td>${elem.alteredQuantity}</td>
       </tr>`
     }).join("")}
@@ -124,3 +187,48 @@ function nutrientsTable(){
 }
 
 
+
+function calculateBMI(){
+    let height = document.getElementById("height").value
+    let weight = document.getElementById("weight").value
+    let weightError = document.getElementById("error-weight")
+    let heightError = document.getElementById("error-height")
+    let bmiResult = document.getElementById("bmi-result")
+
+    if(height && weight){
+        let value = (weight / ((height*height)/10000)).toFixed(2)
+        let bmiText;
+        console.log(value)
+        weightError.innerText = ""
+        heightError.innerText = ""
+        if(value < 18.6){
+            bmiText = "Underweight"
+        }
+        else if(value >= 18.6 && value < 24.9){
+            bmiText = "Normal"
+        }
+        else{
+            bmiText = "Overweight"
+        }
+        bmiResult.innerHTML = `<i>Your BMI is: ${value} and you are ${bmiText}</i>`
+    }
+    else if(!height && weight){
+        weightError.innerText = ""
+        heightError.innerText = "Plese Enter this"
+    }
+    else if(height && !weight){
+        weightError.innerText = "Plese Enter this"
+        heightError.innerText = ""
+    }
+    else{
+        weightError.innerText = "Plese Enter this"
+        heightError.innerText = "Plese Enter this"
+    }
+}
+
+function clearData(){
+    if(data.length>0){
+        data=[]
+        postFood()
+    }
+}
