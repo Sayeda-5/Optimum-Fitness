@@ -1,0 +1,43 @@
+#navbar {
+    display: flex;
+    gap: 20px;
+    padding: 35px 5%;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: white;
+}
+#navbar a > img {
+    height: 46px;
+}
+
+
+#navbar > nav {
+    margin-left: auto;
+}
+#navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#navbar ul .nav-product {
+    cursor: pointer;
+    padding: 10px 5px;
+}
+#navbar ul a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4f4e53;
+}
+
+#navbar ul i {
+    font-size: 17px;
+    margin-left: 4px;
+    color: #4f4e53;
+}
+
+
+
+
