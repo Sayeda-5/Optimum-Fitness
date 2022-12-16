@@ -9,46 +9,49 @@
 </head>
 <body>
     <!-- ********NAVBAR************ -->
+    <!-- changes -->
     <div id="navbar">
         <div class="nav">
             <div>
                 <img id="logo" src="logo img/cw_logo.jpg" alt="Logo">
             </div>
         </div>
+        <div class="dropdown">
+            <button class="dropbtn">Products
+              <i class="down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="index.html">HeathmeterFor Individual</a>
+              <a href="propage.html">Heathmeter For Healthcare Professionals</a>
+            </div>
+    </div>
         <div>
-            <label for="prods">Products</label>
-            <select name="prods" id="products">
-              <option value="individual"><a href="index.html">Heathmeter <br> For Individual</a></option>
-              <option value="individual"><a href="propage.html">Heathmeter <br> For Healthcare Professionals</a></option>
-            </select> 
+            <a href="cronometer_harshit/plans.html">Support</a>
         </div>
         <div>
-            <a href="">Support</a>
-        </div>
-        <div>
-            <a href="">Blog</a>
+            <a href="cronometer_harshit/about.html">About</a>
         </div>
         <div>
             <a href="cronometer_harshit/forums.html">Forums</a>
         </div>
         <div>
-            <button type="login"><a href="auth/login.html">LOG IN</a></button>
+            <button class="btn" type="login"><a href="auth/login.html">LOG IN</a></button>
         </div>
     </div>
+    <hr>
     <!-- *****top***** -->
     <div id="top">
         <div>
             <h1>Eat smater. <br>Live better.</h1>
             <h3>Track your diet, exercise, <br> and health data.</h3>
-            <button><a href="auth/signup.html">Sign Up - it's Free!</a></button>
+            <button class="btn"><a href="auth/signup.html">Sign Up - it's Free!</a></button>
         </div>
         <div>
-            <iframe width="420" height="315"
-            src="https://www.youtube.com/watch?v=4iJYKW826RQ&t=6s">
-            </iframe>
+            <iframe width="632" height="394" src="https://www.youtube.com/embed/4iJYKW826RQ" title="Cronometer. Eat smarter. Live better." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
-    <p class="par">As seen in</p>
+    <div id="t2">
+        <p class="par">As seen in</p>
     <div id="top2">
         <div id="top-div">
          <div>
@@ -65,23 +68,24 @@
         <div id="store">
             <div>
                 <div>
-                <a href="https://apps.apple.com/ca/app/cronometer-nutrition-tracker/id1145935738">
-                    <img src="https://cdn1.cronometer.com/webflow/ios-icon.svg" alt="">
-                </a>
+                    <a href="https://apps.apple.com/ca/app/cronometer-nutrition-tracker/id1145935738">
+                        <img src="https://cdn1.cronometer.com/webflow/ios-icon.svg" alt="">
+                    </a> 
+                </div>  
+                <div>
+                    <a href="https://play.google.com/store/apps/details?id=com.cronometer.android.gold&hl=en_CA">
+                        <img src="https://cdn1.cronometer.com/webflow/android-icon.svg" alt="">
+                    </a>               
+                </div>
             </div>
-            <div>
-                <a href="https://play.google.com/store/apps/details?id=com.cronometer.android.gold&hl=en_CA">
-                    <img src="https://cdn1.cronometer.com/webflow/android-icon.svg" alt="">
-                </a>
             </div>
-            </div>
-            
-        </div>
     </div>
+    </div>
+    
     <!-- Middle part -->
     <div id="mid">
         <div id="text">
-            <h2 class="par">Develop healthy habits</h2>
+            <h1 class="par">Develop healthy habits</h1>
             <h4 class="par">Count your calories, ensure you're meeting nutrient targets, and <br> see your progress over time.</h4>
         </div>
         <div id="six">
@@ -121,11 +125,13 @@
     </div>
     <div id="mid2">
         <div>
-            <h2 class="par">Discover your nutrition</h2>
-            <h4 class="par">Cronometer encourages you to not just count your calories but to focus on your nutrition as a whole.</h4>
-            <img id="mid2-img" src="https://cdn1.cronometer.com/webflow/crono-mobile-hero-img-22x-1-p-500.png" alt="">
-        </div>
+            <h1 class="par">Discover your nutrition</h1>
+            <h4 class="par">Cronometer encourages you to not just count your calories but to focus on your nutrition as a whole.</h4>        </div>
         <div>
+            <div>
+                <img id="mid2-img" src="https://cdn1.cronometer.com/webflow/crono-mobile-hero-img-22x-1-p-500.png" alt="">
+
+            </div>
             <div>
                 <div>
                    <img class="tick" src="https://cdn1.cronometer.com/webflow/checkmark.svg" alt="">
@@ -161,12 +167,12 @@
             <h2>Find out if you're getting the vitamins and minerals you need with our food diary app.</h2>
        </div>
        <div>
-            <button><a href="auth/signup.html">Sign Up - It's Free!</a></button>
+            <button class="btn"><a href="auth/signup.html">Sign Up - It's Free!</a></button>
        </div> 
     </div>
      <div id="apps">
         <div>
-            <h1>Sync with apps and devices</h1>
+            <h1 class="par">Sync with apps and devices</h1>
             <img src="https://cdn1.cronometer.com/webflow/cronometer-devices-3-p-800.png" alt="">
         </div>
      </div>
@@ -175,11 +181,65 @@
             <h1>OptimunPro</h1>
             <h3>For Health Professionals</h3>
             <p>Client diet management for nutritionists, dietitians, research teams, schools, and hospitals.</p>
-            <button><a href="propage.html">Learn About Pro</a></button>
+            <button class="btn"><a href="propage.html">Learn About Pro</a></button>
         </div>
         <div>
             <img src="https://cdn1.cronometer.com/webflow/pro-hero-1-1-p-800.png" alt="">
         </div>
-     </div>    
+     </div>   
+    <!-- footter -->
+    <div id="foot">
+        <div>
+            <img id="logo" src="logo img/cw_logo.jpg" alt="">
+        </div>
+        <div>
+            <h3>The Product</h3>
+            <p><a href="index.html">For Individual</a></p>
+            <p><a href="propage.html">For Professionals</a></p>
+            <p><a href="https://cronometer.com/privacy/">Privacy</a></p>
+            <p><a href="https://cronometer.com/terms/">Terms</a></p>
+        </div>
+        <div>
+            <h3>The Company</h3>
+            <p><a href="cronometer_harshit/about.html">About Us</a></p>
+            <p><a href="cronometer_harshit/forums.html">Forums</a></p>
+            <p><a href="https://cronometer.com/blog/">Blog</a></p>
+            <p><a href="https://cronometer.com/jobs/">Jobs</a></p>
+        </div>
+        <div>
+            <h3>Partners & Affiliates</h3>
+            <p><a href="https://www.shareasale.com/shareasale.cfm?merchantID=61121">Affilate Program</a></p>
+            <p><a href="https://cronometer.com/media/">Media Kit</a></p>
+        </div>
+        <hr style="border: 2px;color: aliceblue;">
+
+
+        <!-- change hea -->
+
+
+
+      <div id="contact">
+        <div>
+            <a href="https://www.facebook.com/cronometer">
+              <img src="https://img.icons8.com/ios-glyphs/2x/facebook-new.png" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="https://www.instagram.com/cronometer_official/?hl=en">
+               <img src="https://img.icons8.com/ios-glyphs/2x/instagram-new.png" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="https://twitter.com/cronometer">
+               <img src="https://img.icons8.com/material-rounded/2x/twitter.png" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="https://www.youtube.com/channel/UCX4_3R4oVBU3Ff5Jmh1iJbw">
+               <img src="https://img.icons8.com/ios-glyphs/2x/youtube.png" alt="">
+            </a>
+        </div>   
+      </div>
+    </div> 
 </body>
 </html>
