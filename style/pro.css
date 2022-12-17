@@ -1,6 +1,6 @@
 body {
-    margin: 50px auto;
-    padding: 15px;
+    margin: 0;
+    padding: 0;
     /* background-color: aliceblue; */
 }
 #logo{
@@ -80,9 +80,12 @@ body {
     display: block;
   }
 #top{
+    /* border: 2px solid; */
     display: flex;
     justify-content: space-around;
     margin: 50px auto;
+    padding: 15px;
+    align-items: center;
 }
 .par{
     text-align: center;
@@ -94,46 +97,86 @@ body {
     align-items: center;
     display: flex;
     justify-content: space-around;
+    /* border: 2px solid; */
+    height: 150px;
+    /* background-color: aliceblue; */
+
 }
 .top-img{
     width: 100px;
 }
-.btn{
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
-    margin: 40px 0 10px 0;
-    border: none;
-    cursor: pointer;
-    background-color: #34A853;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+#top2{
+        /* border: 2px solid; */
+        align-items: center;
+        font-size: x-large;
+        height: 200px;
+}
+#top2img{
+        border: 2px solid;
+        display: flex;
+        align-content: space-around;
+        align-items: center;
+        justify-content: flex-start;
+
+}
+#top2img>div{
+        /* border: 2px solid; */
+        padding: 5px;
+}
+#box{
+    background-color: aliceblue;
+    /* border: 2px solid; */
+    /* width: 100%; */
+    align-items: center;
+    font-size: large;
+    margin: 50px auto;
+}
+#box>div>div{
+    display: flex;
+    align-items: center;
+    margin: 50px auto;
+    
+}
+#box>div>div>div>img{
+    width: 450px;
+    height: 250px;
+}
+#tick>div{
+    display: flex;
+}
+#tick>div>img{
+    width: 400px;
 }
 
-.btn:hover{
-    color: black;
-    background-color: orange;
-}
 #blue-box{
     background-color: rgb(14, 13, 26);
     color: aliceblue;
     margin: 50px auto;
 }
-#contact{
-    width: 50%;
-    /* border: 1px solid black; */
-    display: flex;
-    margin: 50px auto;
-    justify-content: space-evenly;
-}
 .tick{
     width: 50px;
 }
-#tick>div{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+#tick>div>div{
+    display: flex;
+    padding: 10px;
 }
+#standford{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+#standford>div>img{
+    width: 200px;
+}
+#paper{
+    margin: 50px auto;
+    /* padding: 20px; */
+}
+#center{
+    margin: 50px auto;
+    margin-left: 35%;
+}
+
 #bottom{
     display: flex;
     justify-content: space-around;
@@ -159,6 +202,22 @@ body {
     justify-content: space-evenly;
     
     
+}.btn{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 40px 0 10px 0;
+    border: none;
+    cursor: pointer;
+    background-color: #34A853;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    color: black;
+    background-color: orange;
 }
 
     a:link { text-decoration: none; }
