@@ -19,6 +19,26 @@ let foods = [
           {
             "nutrient": "urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9",
             "value": 105.02
+          },
+          {
+            "nutrient": "urn:uuid:666ae7df-af65-4d55-8d5f-996e6cc384ca",
+            "value": 1
+          },
+          {
+            "nutrient": "urn:uuid:975a8d10-8650-4e0c-9a8f-7f4aaa6ae9e2",
+            "value": 28
+          },
+          {
+            "nutrient": "urn:uuid:217d969b-9bad-49d0-b082-07a66c464ec0",
+            "value": 15
+          },
+          {
+            "nutrient": "urn:uuid:7e53326a-e016-4560-ac5a-894c28e5085c",
+            "value": 3
+          },
+          {
+            "nutrient": "urn:uuid:74d1aa06-31c8-4a42-8cd3-2550f674ad03",
+            "value": 450
           }
         ],
         "characteristics": [
@@ -61,6 +81,26 @@ let foods = [
           {
             "nutrient": "urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9",
             "value": 50
+          },
+          {
+            "nutrient": "urn:uuid:975a8d10-8650-4e0c-9a8f-7f4aaa6ae9e2",
+            "value": 13
+          },
+          {
+            "nutrient": "urn:uuid:666ae7df-af65-4d55-8d5f-996e6cc384ca",
+            "value": 3
+          },
+          {
+            "nutrient": "urn:uuid:589294dc-3dcc-4b64-be06-c07e7f65c4bd",
+            "value": 22
+          },
+          {
+            "nutrient": "urn:uuid:7e53326a-e016-4560-ac5a-894c28e5085",
+            "value": 10
+          },
+          {
+            "nutrient": "urn:uuid:4fab08a3-6caa-4d7f-835c-2c18d95eceac",
+            "value": 11
           }
         ],
         "characteristics": [
@@ -109,6 +149,10 @@ let foods = [
           {
             "nutrient": "urn:uuid:666ae7df-af65-4d55-8d5f-996e6cc384ca",
             "value": 30
+          },
+          {
+            "nutrient": "urn:uuid:589294dc-3dcc-4b64-be06-c07e7f65c4bd",
+            "value": 3.6
           }
         ],
         "characteristics": [
@@ -158,6 +202,22 @@ let foods = [
           {
             "nutrient": "urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9",
             "value": 153.495
+          },
+          {
+            "nutrient": "urn:uuid:975a8d10-8650-4e0c-9a8f-7f4aaa6ae9e2",
+            "value": 51
+          },
+          {
+            "nutrient": "urn:uuid:666ae7df-af65-4d55-8d5f-996e6cc384ca",
+            "value": 13
+          },
+          {
+            "nutrient": "urn:uuid:589294dc-3dcc-4b64-be06-c07e7f65c4bd",
+            "value": 5
+          },
+          {
+            "nutrient": "urn:uuid:7e53326a-e016-4560-ac5a-894c28e5085c",
+            "value": 8
           }
         ],
         "characteristics": [
@@ -206,6 +266,26 @@ let foods = [
           {
             "nutrient": "urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9",
             "value": 45
+          },
+          {
+            "nutrient": "urn:uuid:74d1aa06-31c8-4a42-8cd3-2550f674ad03",
+            "value": 146
+          },
+          {
+            "nutrient": "urn:uuid:975a8d10-8650-4e0c-9a8f-7f4aaa6ae9e2",
+            "value": 9
+          },
+          {
+            "nutrient": "urn:uuid:7e53326a-e016-4560-ac5a-894c28e5085c",
+            "value": 1.7
+          },
+          {
+            "nutrient": "urn:uuid:666ae7df-af65-4d55-8d5f-996e6cc384ca",
+            "value": 1.1
+          },
+          {
+            "nutrient": "urn:uuid:1244bade-5ea7-47e1-825e-ae7e06dd7d04",
+            "value": 12
           }
         ],
         "characteristics": [
@@ -246,6 +326,26 @@ let foods = [
           {
             "nutrient": "urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9",
             "value": 77.56
+          },
+          {
+            "nutrient": "urn:uuid:589294dc-3dcc-4b64-be06-c07e7f65c4bd",
+            "value": 12
+          },
+          {
+            "nutrient": "urn:uuid:bde92a59-1aad-40d8-8abc-1486f17ba5ed",
+            "value": 63
+          },
+          {
+            "nutrient": "urn:uuid:4fab08a3-6caa-4d7f-835c-2c18d95eceac",
+            "value": 61
+          },
+          {
+            "nutrient": "urn:uuid:74d1aa06-31c8-4a42-8cd3-2550f674ad03",
+            "value": 384
+          },
+          {
+            "nutrient": "urn:uuid:666ae7df-af65-4d55-8d5f-996e6cc384ca",
+            "value": 22
           }
         ],
         "characteristics": [],
@@ -285,6 +385,14 @@ let foods = [
           {
             "nutrient": "urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9",
             "value": 77.5
+          },
+          {
+            "nutrient": "urn:uuid:666ae7df-af65-4d55-8d5f-996e6cc384ca",
+            "value": 7
+          },
+          {
+            "nutrient": "urn:uuid:589294dc-3dcc-4b64-be06-c07e7f65c4bd",
+            "value": 5
           }
         ],
         "characteristics": [
@@ -326,6 +434,22 @@ let foods = [
           {
             "nutrient": "urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9",
             "value": 61.57
+          },
+          {
+            "nutrient": "urn:uuid:7e53326a-e016-4560-ac5a-894c28e5085c",
+            "value": 3
+          },
+          {
+            "nutrient": "urn:uuid:217d969b-9bad-49d0-b082-07a66c464ec0",
+            "value": 12
+          },
+          {
+            "nutrient": "urn:uuid:c7b38308-69b8-4ab8-ae59-2cb837385d82",
+            "value": 14
+          },
+          {
+            "nutrient": "urn:uuid:1244bade-5ea7-47e1-825e-ae7e06dd7d04",
+            "value": 70
           }
         ],
         "characteristics": [
@@ -368,6 +492,18 @@ let foods = [
           {
             "nutrient": "urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9",
             "value": 23.04
+          },
+          {
+            "nutrient": "urn:uuid:666ae7df-af65-4d55-8d5f-996e6cc384ca",
+            "value": 1.02
+          },
+          {
+            "nutrient": "urn:uuid:975a8d10-8650-4e0c-9a8f-7f4aaa6ae9e2",
+            "value": 11.67
+          },
+          {
+            "nutrient": "urn:uuid:217d969b-9bad-49d0-b082-07a66c464ec0",
+            "value": 5.01
           }
         ],
         "characteristics": [

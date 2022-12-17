@@ -5,3 +5,6 @@ for (let i = 0; i <= getToggle.length; i++) {
         getSidebar.classList.toggle('active');
     });
 }
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="bmi.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+        <h3>Dashboard</h3>
+        <a href="#">
+            <i class="fa fa-sign-out-alt"></i>
+        </a>
+    </header>
+    <div class="body-section">
+    <nav>
+        <ul>
+            <li>
+                <a class="toggle logo-div" href="index.html">
+                    <!-- <span class="icon"><i class="fa fa-bars"></i></span>
+                    <span class="title">Dashboard</span> -->
+                    <div clas="">
+                    <img src="./assets//png/logo_new.png" class="logo">
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span class="icon"><i class="fa fa-bars"></i></span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="diary.html">
+                    <span class="icon"><i class="fa fa-book"></i></span>
+                    <span class="title">Diary</span>
+                </a>
+            </li>
+            <li>
+                <a href="nutrients.html">
+                    <span class="icon"><i class="fa fa-medkit"></i></span>
+                    <span class="title">Nutrient Chart</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa fa-cutlery"></i></span>
+                    <span class="title">Foods</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa fa-cog"></i></span>
+                    <span class="title">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa fa-tasks"></i></span>
+                    <span class="title">Plan</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa fa-question-circle"></i></span>
+                    <span class="title">Help</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa fa-info"></i></span>
+                    <span class="title">About</span>
+                </a>
+            </li>      
+        </ul>
+    </nav>
+
+    <div id = "top-box">
+        <div class="top-nav">
+            <div class="avatar">
+                <p><i>Hi, Amar</i></p>
+                <img src="./assets//png/user.png" class="user-img">
+            </div>
+        </div>
+        <div id="top-box-inner-2">
+            <h1 class="heading-1">My Dashboard</h1>
+
+        <div class="diary-card">
+            <div id="outer-tab">
+            <div class="tab-menu">
+                <a href="diary.html">
+                <div class="food-add">
+                <img src = "./assets/png/food.png"/>&nbsp; &nbsp;
+                <p>Add Food to be diplayed here in your diary.</p>
+                </div>
+                </a>
+            </div> 
+            <a href="diary.html">
+            <div class="add-icon-div"><img class = "add-icon" src = "./assets/png/add.png"/>
+            </div></a>
+            </div>
+        </div>
+
+        <br/>
+        <div class="chart-section">
+        <div class="card-1">
+            <img src="./assets/png/blog.jpeg"/>
+            <p> <b>BLOG:</b><i>Your diet is a bank account. Good food choices are good investments. </i></p>
+            
+        </div>
+        <div class="chart-card-2">
+            <h4><i>Calculate your BMI</i></h4><br>
+                   
+                      <div class="card-input">
+                        <label for="cardNumber" class="card-input__label">Height (in cm)</label>
+                        <input type="number"  id="height" class="card-input__input">
+                        <p id="error-height"></p>
+                      </div>
+                      <div class="card-input">
+                        <label for="cardName" class="card-input__label">Weight (in kg)</label>
+                        <input type="number"  id="weight" class="card-input__input">
+                        <p id="error-weight"></p>
+                      </div>
+                      <p id="bmi-result"></p>
+                      <button class="card-form__button" id="calculate-bmi" onclick="calculateBMI()">
+                        Calculate
+                      </button>
+              </div>
+        </div>
+        <br/>
+        <div class="poster-card">
+           <img src="./assets/png/food-and-nutrition.jpg"/>
+        </div>
+
+    </div>
+
+
+</div>
+</div>
+
+
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="foodJson.js"></script>
+<script src="nutrientsJson.js"></script>
+<script src="sidebar.js"></script>
+<script src="bmi.js"></script>
