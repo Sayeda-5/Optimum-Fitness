@@ -1,0 +1,23 @@
+
+
+
+.terms_container {
+    width: 85%;
+    margin: auto;
+}
+
+li {
+    font-weight: bolder;
+    font-family: "Open Sans", sans-serif;
+}
+.terms_makeitbold {
+    font-weight: bolder;
+    color: rgb(86, 83, 83);
+}
+p {
+    font-family: "Open Sans", sans-serif;
+    color: rgb(64, 61, 61);
+}
+#terms_intro {
+    font-style: italic;
+}
