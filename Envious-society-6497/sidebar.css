@@ -14,6 +14,12 @@
 }
 body {
     min-height: 100vh;
+    background-color: #fffef1;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(25, 25, 25);
 }
 
 nav {
@@ -31,7 +37,7 @@ nav.active {
 }
 
 nav:hover {
-    width: 20%;
+    width: 21%;
 }
 
 nav ul {
@@ -52,7 +58,7 @@ nav ul li a:hover {
     color: var(--bg-primary);
 }
 
-nav ul li:hover a::before {
+nav ul li:not(:first-child):hover a::before {
     background-color: var(--bg-active);
     width: 100%;
 }
@@ -97,7 +103,7 @@ nav ul li a .icon * {
 }
 
 nav ul li a.toggle {
-    border-bottom: 3px solid var(--bg-primary);
+    border-bottom: 1px solid #757575;
 }
 
 .toggle {
@@ -140,12 +146,24 @@ header {
     --bg-primary: #1d1f1c;
     --bg-secondary: #52575d;
     --bg-active: #e3a72f;
-    --cl-text: #fddb3a;
+    --cl-text: #e3a72f;
 }
 #top-box{
-    height: 200px;
+    height: 100vh;
     width: 100%;
+    /* padding:20px; */
+    overflow: scroll;
+
+}
+#top-box-inner{
     padding:20px;
+
+}
+
+#top-box-inner-2{
+    padding:20px;
+    width: 80%;
+    margin: auto;
 }
 
 .body-section{
@@ -153,7 +171,7 @@ header {
     flex-direction: row;
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
 }
 .diary-card{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -161,6 +179,7 @@ header {
     padding: 15px;
     display: flex;
     flex-direction: column;
+    background: #fff;
 }
 ul li{
     list-style: none;
@@ -199,6 +218,8 @@ ul li{
     padding: 15px;
     display: flex;
     flex-direction: column;
+    font-size: 14px;
+    background: #fff;
 }
 
 .table-flex{
@@ -207,11 +228,15 @@ ul li{
     width: 100%;
 }
 #food-menu, select{
-   height: 40px;  
-   text-align: center;  
-   background-color: #52575d;
-   color: #e3a72f; 
-   border-radius: 10px;        
+    height: 40px;
+    text-align: center;
+    /* background-color: #52575d; */
+    color: #2e2e2e;
+    border-radius: 30px;
+    padding: 7px;
+    border: none; 
+    font-size: 18px;
+    cursor: pointer;     
 }
 
 .chart-card-1{
@@ -222,6 +247,7 @@ ul li{
     flex-direction: column; 
     width: 100%;
     height: 330px;
+    background: #fff;
 }
 
 .chart-card-2{
@@ -232,6 +258,7 @@ ul li{
     flex-direction: column; 
     width: 100%;
     height: 330px;
+    background: #fff;
 }
 
 .chart-section{
@@ -260,6 +287,8 @@ ul li{
 
 .tab-menu{
     width: fit-content;
+    display: flex;
+    gap: 30px;
 }
 .delete-icon{
     height: 20px;
@@ -278,3 +307,135 @@ ul li{
 .delete-icon:hover{
     height: 25px;
 }
+
+.add-icon{
+    height: 35px;
+    transition-property: height;
+    transition-duration: 4s;
+    transition-delay: 2s;
+}
+.add-icon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 20%;
+}
+
+.add-icon:hover{
+    height: 40px;
+}
+
+
+
+
+.logo{
+   height: 50px;
+  }
+.logo-div{
+    padding: 15px 12px;
+}
+
+.food-add{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.food-add>img{
+    height: 35px;
+}
+
+.food-add>p{
+    font-size: 18px;
+}
+.top-nav{
+   display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #e9e9e9;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    width: 100%;
+    padding: 11px;
+    justify-content: right;
+}
+.avatar{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+    cursor: pointer;
+
+}
+.user-img{
+    height: 27px;
+}
+.avatar > p{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.card-1{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    background: #fff;
+}
+.card-1>img{
+    width:100%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+.card-1 > p{
+    padding: 20px;
+    font-size: 18px;
+}
+.poster-card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+.poster-card > img {
+    width:100%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.heading-1{
+    margin:20px 0px;
+    font-weight: bolder;
+    font-size: 36px;
+    color: rgb(38, 38, 38);
+}
+
+.heading-custom{
+    margin:10px 0px;
+    font-weight: bolder;
+    font-size: 28px;
+    color: rgb(38, 38, 38);
+}
+
+.download-chart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.download-icon{
+    cursor: pointer;
+    color: rgb(73, 173, 255);
+}
+
+
+
+
+
+

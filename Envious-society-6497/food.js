@@ -2,21 +2,21 @@ let data=[];
 nutrients.forEach(item=>item.value=0)
 let options = document.getElementById("food-menu")
 foods.forEach((food)=>{
+    if(options){
     let optionElem = document.createElement("option")
     optionElem.innerText = food.description
     
     optionElem.value = JSON.stringify(food);
     options.append(optionElem)
-   
+    }
 })
 
 selectedFoodTable([])
 chartDisplay();
 
 
-options.addEventListener("change", foodAddition)
+options?.addEventListener("change", foodAddition)
 function foodAddition(e){
-    // console.log(e.target.value)
     let obj= JSON.parse(e.target.value)
     if(data.length>0 && data.some(item => item.id === obj.id)){
         let index = data.findIndex(item=>item.id===obj.id)
@@ -35,6 +35,26 @@ function foodAddition(e){
     data.push(obj)
     }
     postFood()
+}
+
+async function getFood(){
+    let response = await fetch("https://json.extendsclass.com/bin/8051c1253011",
+     {
+       method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: "78b6820d-7b96-11ed-8b32-0242ac110002"
+        },
+     })
+     let resData = response.json()
+     resData.then((res)=>{
+        selectedData = res
+        console.log(selectedData)
+        data = selectedData
+        selectedFoodTable(selectedData);
+        addToNutrientsSummary(selectedData);
+        chartDisplay();
+     })
 }
 async function postFood(){
     let response = await fetch("https://json.extendsclass.com/bin/8051c1253011",
@@ -74,7 +94,7 @@ if(energyValue && energyValue>2258){
 }
 
 var barColors = [
-  "#b91d47",
+  "#e3a72f",
 ];
 
 new Chart("myChart", {
@@ -137,19 +157,21 @@ nutrientsTable()
 
 
 function selectedFoodTable(foods){
+    if(options){
     document.querySelector(".selected-foods").innerHTML = foods.length>0?`
     <table>
     <tbody>
     ${foods.map((elem)=>{
         return ` <tr>
-        <td>${elem.description}</td>
-        <td>${Math.max(...elem.nutrient_data.map(obj=>obj.altered_value))}</td>
-        <td>${elem.alteredQuantity}</td>
+        <td>${elem.description} - ${elem.category}</td>
+        <td>${elem.nutrient_data.find(obj=>obj.nutrient==="urn:uuid:a4d01e46-5df2-4cb3-ad2c-6b438e79e5b9").altered_value} KCal</td>
+        <td>${elem.alteredQuantity} Qty.</td>
       </tr>`
     }).join("")}
     </tbody>
     </table>
     `:`<div>Add Food to be diplayed here in your diary.</div>`
+}
 }
 
 function nutrientsTable(){
@@ -188,43 +210,6 @@ function nutrientsTable(){
 
 
 
-function calculateBMI(){
-    let height = document.getElementById("height").value
-    let weight = document.getElementById("weight").value
-    let weightError = document.getElementById("error-weight")
-    let heightError = document.getElementById("error-height")
-    let bmiResult = document.getElementById("bmi-result")
-
-    if(height && weight){
-        let value = (weight / ((height*height)/10000)).toFixed(2)
-        let bmiText;
-        console.log(value)
-        weightError.innerText = ""
-        heightError.innerText = ""
-        if(value < 18.6){
-            bmiText = "Underweight"
-        }
-        else if(value >= 18.6 && value < 24.9){
-            bmiText = "Normal"
-        }
-        else{
-            bmiText = "Overweight"
-        }
-        bmiResult.innerHTML = `<i>Your BMI is: ${value} and you are ${bmiText}</i>`
-    }
-    else if(!height && weight){
-        weightError.innerText = ""
-        heightError.innerText = "Plese Enter this"
-    }
-    else if(height && !weight){
-        weightError.innerText = "Plese Enter this"
-        heightError.innerText = ""
-    }
-    else{
-        weightError.innerText = "Plese Enter this"
-        heightError.innerText = "Plese Enter this"
-    }
-}
 
 function clearData(){
     if(data.length>0){
@@ -232,3 +217,5 @@ function clearData(){
         postFood()
     }
 }
+
+getFood()
