@@ -64,7 +64,7 @@ form.addEventListener("submit", async (e) => {
           window.location.href="../admin/admin.html";
         }else{
           localStorage.setItem('username',username);
-          window.location.href="../Envious-society-6497/sidebar.html"
+          window.location.href="../Envious-society-6497/index.html"
         }
       } else {
         alert(`username and password doesn't match`);
