@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>Optimum Fitness</title>
     <link rel="stylesheet" href="style/index.css">
 </head>
+
 <body>
     <!-- ********NAVBAR************ -->
     <!-- changes -->
-    <div id="navbar">
+    <!-- <div id="navbar">
         <div class="nav">
             <div>
                 <img id="logo" src="logo img/cw_logo.jpg" alt="Logo">
@@ -37,8 +39,36 @@
         <div>
             <button class="btn" type="login"><a href="auth/login.html">LOG IN</a></button>
         </div>
+    </div> -->
+
+    <div id="navbar_container" class="collapse">
+
+        <header id="navbar" class="collapse">
+            <a href="./index.html">
+                <img src="https://cdn1.cronometer.com/2021/landing/cronometer-logo.svg" alt="our main logo"
+                    class="logo">
+            </a>
+            <nav>
+                <ul class="navbar-list">
+                    <li>
+                        <div class="nav-product">
+                            <a href="./pro.html">Pro</a>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </li>
+                    <li><a href="../cronometer_harshit\support.html" class="navbar-link">Support</a></li>
+                    <li><a href="./blog.html" class="navbar-link">Blog</a></li>
+                    <li><a href="../cronometer_harshit\forums.html" class="navbar-link">Forums</a></li>
+                    <li><a href="../cronometer_harshit\about.html" class="navbar-link">About</a></li>
+                    <li><a href="../auth\login.html" class="navbar-link-b">Log In</a></li>
+                </ul>
+            </nav>
+            <i id="menu_button" class="mobile-navbar-btn fa-solid fa-bars"></i>
+        </header>
+
     </div>
-    <hr>
+
+
     <!-- *****top***** -->
     <div id="top">
         <div>
@@ -47,46 +77,50 @@
             <button class="btn"><a href="auth/signup.html">Sign Up - it's Free!</a></button>
         </div>
         <div>
-            <iframe width="632" height="394" src="https://www.youtube.com/embed/4iJYKW826RQ" title="Cronometer. Eat smarter. Live better." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="632" height="394" src="https://www.youtube.com/embed/4iJYKW826RQ"
+                title="Cronometer. Eat smarter. Live better." frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
     </div>
     <div id="t2">
         <p class="par">As seen in</p>
-    <div id="top2">
-        <div id="top-div">
-         <div>
-            <img class="top-img" src="https://cdn1.cronometer.com/webflow/media-mention-2.svg" alt="">
-        </div>
-        <div>
-            <img class="top-img" src="https://cdn1.cronometer.com/webflow/media-mention-1.svg" alt="">
-        </div>
-        <div>
-            <img class="top-img" src="https://cdn1.cronometer.com/webflow/media-mention-3.svg" alt="">
-        </div>
-        </div>
-        <p class="par">Available on Web, iOS and Android.</p>
-        <div id="store">
-            <div>
+        <div id="top2">
+            <div id="top-div">
                 <div>
-                    <a href="https://apps.apple.com/ca/app/cronometer-nutrition-tracker/id1145935738">
-                        <img src="https://cdn1.cronometer.com/webflow/ios-icon.svg" alt="">
-                    </a> 
-                </div>  
+                    <img class="top-img" src="https://cdn1.cronometer.com/webflow/media-mention-2.svg" alt="">
+                </div>
                 <div>
-                    <a href="https://play.google.com/store/apps/details?id=com.cronometer.android.gold&hl=en_CA">
-                        <img src="https://cdn1.cronometer.com/webflow/android-icon.svg" alt="">
-                    </a>               
+                    <img class="top-img" src="https://cdn1.cronometer.com/webflow/media-mention-1.svg" alt="">
+                </div>
+                <div>
+                    <img class="top-img" src="https://cdn1.cronometer.com/webflow/media-mention-3.svg" alt="">
                 </div>
             </div>
+            <p class="par">Available on Web, iOS and Android.</p>
+            <div id="store">
+                <div>
+                    <div>
+                        <a href="https://apps.apple.com/ca/app/cronometer-nutrition-tracker/id1145935738">
+                            <img src="https://cdn1.cronometer.com/webflow/ios-icon.svg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.cronometer.android.gold&hl=en_CA">
+                            <img src="https://cdn1.cronometer.com/webflow/android-icon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
     </div>
-    </div>
-    
+
     <!-- Middle part -->
     <div id="mid">
         <div id="text">
             <h1 class="par">Develop healthy habits</h1>
-            <h4 class="par">Count your calories, ensure you're meeting nutrient targets, and <br> see your progress over time.</h4>
+            <h4 class="par">Count your calories, ensure you're meeting nutrient targets, and <br> see your progress over
+                time.</h4>
         </div>
         <div id="six">
             <div>
@@ -126,57 +160,68 @@
     <div id="mid2">
         <div>
             <h1 class="par">Discover your nutrition</h1>
-            <h4 class="par">Cronometer encourages you to not just count your calories but to focus on your nutrition as a whole.</h4>        </div>
-        <div>
+            <h4 class="par">Cronometer encourages you to not just count your calories but to focus on your nutrition as
+                a whole.</h4>
+        </div>
+        <div id="mid2-flex">
             <div>
-                <img id="mid2-img" src="https://cdn1.cronometer.com/webflow/crono-mobile-hero-img-22x-1-p-500.png" alt="">
+                <img id="mid2-img" src="https://cdn1.cronometer.com/webflow/crono-mobile-hero-img-22x-1-p-500.png"
+                    alt="">
 
             </div>
             <div>
+
                 <div>
-                   <img class="tick" src="https://cdn1.cronometer.com/webflow/checkmark.svg" alt="">
+                    <div>
+                        <img class="tick" src="https://cdn1.cronometer.com/webflow/checkmark.svg" alt="">
+                    </div>
+                    <div>
+                        <h3>Over 6 million users</h3>
+                        <p>Join the community to get tips and inspiration from other users on our forums and Facebook
+                            group.</p>
+                    </div>
                 </div>
                 <div>
-                   <h3>Over 6 million users</h3>
-                   <p>Join the community to get tips and inspiration from other users on our forums and Facebook group.</p>
+                    <div>
+                        <img class="tick" src="https://cdn1.cronometer.com/webflow/checkmark.svg" alt="">
+                    </div>
+                    <div>
+                        <h3>Accurate nutrition data</h3>
+                        <p>Be confident that the food you log has the correct nutrition data. We verify every food
+                            submission for accuracy.</p>
+                    </div>
                 </div>
+                <div>
+                    <div>
+                        <img class="tick" src="https://cdn1.cronometer.com/webflow/checkmark.svg" alt="">
+                    </div>
+                    <div>
+                        <h3>Data privacy & security</h3>
+                        <p>We don't sell your account data to third parties and take the security of our users' accounts
+                            seriously.</p>
+                    </div>
+                </div>
+
             </div>
-            <div>
-                <div>
-                   <img class="tick" src="https://cdn1.cronometer.com/webflow/checkmark.svg" alt="">
-                </div>
-                <div>
-                   <h3>Accurate nutrition data</h3>
-                   <p>Be confident that the food you log has the correct nutrition data. We verify every food submission for accuracy.</p>
-                </div>
-            </div>
-            <div>
-                <div>
-                   <img class="tick" src="https://cdn1.cronometer.com/webflow/checkmark.svg" alt="">
-                </div>
-                <div>
-                   <h3>Data privacy & security</h3>
-                   <p>We don't sell your account data to third parties and take the security of our users' accounts seriously.</p>
-                </div>
-            </div>
-            
+
+
         </div>
     </div>
     <div id="blue-box">
         <div>
             <h2>Find out if you're getting the vitamins and minerals you need with our food diary app.</h2>
-       </div>
-       <div>
+        </div>
+        <div>
             <button class="btn"><a href="auth/signup.html">Sign Up - It's Free!</a></button>
-       </div> 
+        </div>
     </div>
-     <div id="apps">
+    <div id="apps">
         <div>
             <h1 class="par">Sync with apps and devices</h1>
             <img src="https://cdn1.cronometer.com/webflow/cronometer-devices-3-p-800.png" alt="">
         </div>
-     </div>
-     <div id="bottom">
+    </div>
+    <div id="bottom">
         <div>
             <h1>OptimunPro</h1>
             <h3>For Health Professionals</h3>
@@ -186,10 +231,12 @@
         <div>
             <img src="https://cdn1.cronometer.com/webflow/pro-hero-1-1-p-800.png" alt="">
         </div>
-     </div>   
+    </div>
     <!-- footter -->
-    <div id="foot">
-        <div>
+    <!-- <div id="foot"> -->
+
+
+    <!-- <div>
             <img id="logo" src="logo img/cw_logo.jpg" alt="">
         </div>
         <div>
@@ -214,7 +261,7 @@
         <hr style="border: 2px;color: aliceblue;">
 
 
-        <!-- change hea -->
+     
 
 
 
@@ -239,7 +286,77 @@
                <img src="https://img.icons8.com/ios-glyphs/2x/youtube.png" alt="">
             </a>
         </div>   
-      </div>
-    </div> 
+      </div> -->
+
+
+
+
+    <div id="footer">
+        <div class="social-media">
+            <div>
+                <a href=""><img src="https://cdn1.cronometer.com/2021/landing/social_instagram-icon.png"
+                        alt="instagram"></a>
+                <a href=""><img src="https://cdn1.cronometer.com/2021/landing/social_facebook-icon.png"
+                        alt="facebook"></a>
+                <a href=""><img src="https://cdn1.cronometer.com/2021/landing/social_twitter-icon.png"
+                        alt="twitter"></a>
+                <a href=""><img src="https://cdn1.cronometer.com/2021/landing/social_youtube-icon.png"
+                        alt="youtube"></a>
+            </div>
+            <div>
+                <a  href=""><img
+                        src="https://cdn1.cronometer.com/2021/landing/ios-icon.svg" alt="AppStore"></a>
+                <a 
+                    href=""><img
+                        src="https://cdn1.cronometer.com/2021/landing/android-icon.svg" alt="PlayStore"></a>
+            </div>
+        </div>
+
+        <div class="horizontal-line"></div>
+
+        <div class="quick-links">
+            <div>
+                <img src="https://cdn1.cronometer.com/2021/landing/crono-logo-white.svg" alt="logo">
+            </div>
+
+            <ul>
+                <li>
+                    <h4>Cronometer</h4>
+                </li>
+                <li><a href="/">For Individuals</a></li>
+                <li><a href="./pro.html">For professionals</a></li>
+                <li><a href="./privacy&policy.html">Privacy</a></li>
+                <li><a href="./terms.html">Terms</a></li>
+            </ul>
+
+            <ul>
+                <li>
+                    <h4>The Company</h4>
+                </li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./blog.html">Crono Blog</a></li>
+                <li><a href="./forums.html">Crono Forums</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="./support.html">Support</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <h4>Partners & Affiliates</h4>
+                </li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Media Kit</a></li>
+            </ul>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &#169; 2011-2022<br>All rights Reserved</p>
+        </div>
+    </div>
+
+
+
+
+    <!-- </div>  -->
 </body>
+
 </html>

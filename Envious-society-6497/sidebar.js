@@ -6,5 +6,19 @@ for (let i = 0; i <= getToggle.length; i++) {
     });
 }
 
+aboutus=document.querySelector("#aboutus")
+drop=document.querySelector("#drop")
+let ss=0
+
+aboutus.addEventListener("click",()=>{
+    if(ss==0){
+        ss=1;
+        drop.style.display="block"
+    }
+    else{
+        ss=0
+        drop.style.display="none"
+    }
+})
 
 
