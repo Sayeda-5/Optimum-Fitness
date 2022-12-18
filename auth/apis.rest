@@ -41,3 +41,30 @@ Content-Type: application/json
   "userLevel": 4
 }
 
+
+###
+
+POST https://639ad46531877e43d677befe.mockapi.io/optimumfitness/users
+Content-Type: application/json
+
+{
+  "username": "UjjwalS",
+  "email": "Ujjwal98@gmail.com",
+  "password": "ujjwal@1309",
+  "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQQXr8hkP4Ssuwoa71R1HEpkNMzb5FHjNRxg&usqp=CAU",
+  "admin": "true"
+}
+
+
+###
+
+PUT https://639ad46531877e43d677befe.mockapi.io/optimumfitness/users/5
+Content-Type: application/json
+
+{
+  "username": "Retsudan",
+  "email": "Sasuke13@gmail.com",
+  "password": "mangekyo@1309",
+  "avatar": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+  "admin": "true"
+}
