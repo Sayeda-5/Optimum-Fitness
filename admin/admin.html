@@ -15,7 +15,7 @@
 <body>
     <div id="loader">
         <iframe src="https://giphy.com/embed/sSgvbe1m3n93G" class="giphy-embed"></iframe>
-    </div>
+    </div>l
     <div id="admin_main">
         <div class="container">
             <aside>
@@ -32,23 +32,23 @@
                 </div>
 
                 <div class="sidebar">
-                    <a href="#">
+                    <a id="side_dash" href="#" class="active">
                         <span class="material-symbols-sharp">
                             apps
                         </span>
                         <h3>Dashboard</h3>
                     </a>
-                    <a href="#" class="active">
+                    <a id="side_user" href="#">
                         <span class="material-symbols-sharp">
                             person
                         </span>
-                        <h3>Customers</h3>
+                        <h3>Users</h3>
                     </a>
                     <a href="#">
                         <span class="material-symbols-sharp">
                             receipt_long
                         </span>
-                        <h3>Orders</h3>
+                        <h3>Charts</h3>
                     </a>
                     <a href="#">
                         <span class="material-symbols-sharp">
@@ -67,7 +67,7 @@
                         <span class="material-symbols-sharp">
                             inventory
                         </span>
-                        <h3>Products</h3>
+                        <h3>Premium Users</h3>
                     </a>
                     <a href="#">
                         <span class="material-symbols-sharp">
@@ -87,7 +87,7 @@
                         </span>
                         <h3>Add Product</h3>
                     </a>
-                    <a href="#">
+                    <a id="log_out" href="#">
                         <span class="material-symbols-sharp">
                             logout
                         </span>
@@ -98,141 +98,77 @@
 
             <!-- End of sidebar -->
 
-            <main>
+            <main id="main_dash">
                 <h1>Dashboard</h1>
 
                 <div class="date">
-                    <input type="date">
+                    <h2>BMI of Latest Users</h2>
                 </div>
 
-                <div class="insights">
-                    <div class="sales">
-                        <span class="material-icons-sharp">
-                            analytics
-                        </span>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Total Sales</h3>
-                                <h1>20000</h1>
-
-                            </div>
-                            <div class="progress">
-                                <svg>
-                                    <circle cx="38" cy="38" r="36"></circle>
-                                </svg>
-                                <div class="number">
-                                    <p>81%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <small class="text-muted">Last 24 Hours</small>
-                    </div>
-                    <!-- end 1 -->
-                    <div class="expenses">
-                        <span class="material-icons-sharp">
-                            bar_chart
-                        </span>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Total Expenses</h3>
-                                <h1>20000</h1>
-
-                            </div>
-                            <div class="progress">
-                                <svg>
-                                    <circle cx="38" cy="38" r="36"></circle>
-                                </svg>
-                                <div class="number">
-                                    <p>81%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <small class="text-muted">Last 24 Hours</small>
-                    </div>
-                    <!-- end 2 -->
-                    <div class="income">
-                        <span class="material-icons-sharp">
-                            stacked_line_chart
-                        </span>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Total Sales</h3>
-                                <h1>12000</h1>
-
-                            </div>
-                            <div class="progress">
-                                <svg>
-                                    <circle cx="38" cy="38" r="36"></circle>
-                                </svg>
-                                <div class="number">
-                                    <p>44%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <small class="text-muted">Last 24 Hours</small>
-                    </div>
-                    <!-- end 3 -->
-                </div>
+                <div class="insights" id="latest"></div>
                 <!-- End of insights -->
                 <div class="recent-orders">
-                    <h2>Recent Order</h2>
+                    <h2>Users Data</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th>Product Name</th>
-                                <th>Product Number</th>
-                                <th>Payment</th>
-                                <th>Status</th>
+                                <th>Email</th>
+                                <th>Username</th>
+                                <th>Gender</th>
+                                <th>Height</th>
+                                <th>Weight</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Foldable Mini Drone</td>
-                                <td>85631</td>
-                                <td>Due</td>
-                                <td class="warning">Pending</td>
-                                <td class="primary">Details</td>
-                            </tr>
-                            <tr>
-                                <td>Foldable Mini Drone</td>
-                                <td>85631</td>
-                                <td>Due</td>
-                                <td class="warning">Pending</td>
-                                <td class="primary">Details</td>
-                            </tr>
-                            <tr>
-                                <td>Foldable Mini Drone</td>
-                                <td>85631</td>
-                                <td>Due</td>
-                                <td class="warning">Pending</td>
-                                <td class="primary">Details</td>
-                            </tr>
-                            <tr>
-                                <td>Foldable Mini Drone</td>
-                                <td>85631</td>
-                                <td>Due</td>
-                                <td class="warning">Pending</td>
-                                <td class="primary">Details</td>
-                            </tr>
-                            <tr>
-                                <td>Foldable Mini Drone</td>
-                                <td>85631</td>
-                                <td>Due</td>
-                                <td class="warning">Pending</td>
-                                <td class="primary">Details</td>
-                            </tr>
-                            <tr>
-                                <td>Foldable Mini Drone</td>
-                                <td>85631</td>
-                                <td>Due</td>
-                                <td class="warning">Pending</td>
-                                <td class="primary">Details</td>
-                            </tr>
-                        </tbody>
+                        <!-- Appending data of the users in tbody -->
+                        <tbody id="tbody"></tbody>
                     </table>
-                    <a href="#">Show All</a>
+                    <div id="pagination_wrapper">
+
+                    </div>
                 </div>
             </main>
+
+            <div id="users_main">
+                <h1>Users</h1>
+
+                <div class="date">
+                    <h2>The Data of All The Users</h2>
+                </div>
+
+                <div class="sort">
+                    <div>
+                        <h3>Sort by Name</h3>
+                        <select id="sortName">
+                            <option value="">Default</option>
+                            <option value="asc">A-Z</option>
+                            <option value="dsc">Z-A</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Sort by Weight</h3>
+                        <select id="sortWeight">
+                            <option value="">Default</option>
+                            <option value="asc">Ascending</option>
+                            <option value="dsc">Descending</option>
+                        </select>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Height</th>
+                            <th>Weight</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="users_tbody">
+                    </tbody>
+                </table>
+
+            </div>
 
             <!-- End of main section -->
 
@@ -253,51 +189,23 @@
                     </div>
                     <div class="profile">
                         <div class="info">
-                            <p>hey <b>Admin name</b></p>
+                            <p>hey <b id="admin_name"></b></p>
                             <small class="text-muted">Admin</small>
                         </div>
                         <div class="profile-photo">
-                            <img src="https://w0.peakpx.com/wallpaper/1002/951/HD-wallpaper-jujutsu-kaisen-op-strong-anime-gojo-satoru-love.jpg"
-                                alt="">
+                            <img id="admin_img" alt="error">
                         </div>
                     </div>
                 </div>
 
                 <!-- End of top -->
                 <div class="recent-updates">
-                    <h2>Recent Updates</h2>
+                    <h2>All Admins</h2>
                     <div class="updates">
-                        <div class="update">
-                            <div class="profile-photo">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsRwRQDV3Nf3lPXBTbFJVy-ZgETemWPyL3MJIHlrW83f-xPBGLvFJc_G-3WTNt5PUE9Co&usqp=CAU"
-                                    alt="">
-                            </div>
-                            <div class="message">
-                                <p><b>Gojo Sataru</b></p>
-                            </div>
-                        </div>
-                        <div class="update">
-                            <div class="profile-photo">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsRwRQDV3Nf3lPXBTbFJVy-ZgETemWPyL3MJIHlrW83f-xPBGLvFJc_G-3WTNt5PUE9Co&usqp=CAU"
-                                    alt="">
-                            </div>
-                            <div class="message">
-                                <p><b>Gojo Sataru</b></p>
-                            </div>
-                        </div>
-                        <div class="update">
-                            <div class="profile-photo">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsRwRQDV3Nf3lPXBTbFJVy-ZgETemWPyL3MJIHlrW83f-xPBGLvFJc_G-3WTNt5PUE9Co&usqp=CAU"
-                                    alt="">
-                            </div>
-                            <div class="message">
-                                <p><b>Gojo Sataru</b></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="sales-analytics">
-                    <h2>Sales Analytics</h2>
+                    <h2>Optimum Analytics</h2>
                     <div class="item online">
                         <div class="icon">
                             <span class="material-icons-sharp">
@@ -306,7 +214,7 @@
                         </div>
                         <div class="right">
                             <div class="info">
-                                <h3>ONLINE ORDERS</h3>
+                                <h3>ONLINE USERS</h3>
                                 <small class="text-muted">Last 24 Hours</small>
                             </div>
                             <h5 class="success">+39%</h5>
@@ -321,7 +229,7 @@
                         </div>
                         <div class="right">
                             <div class="info">
-                                <h3>OFFLINE ORDERS</h3>
+                                <h3>OFFLINE USERS</h3>
                                 <small class="text-muted">Last 24 Hours</small>
                             </div>
                             <h5 class="danger">-17%</h5>
@@ -336,7 +244,7 @@
                         </div>
                         <div class="right">
                             <div class="info">
-                                <h3>NEW CUSTOMERs</h3>
+                                <h3>NEW USERS</h3>
                                 <small class="text-muted">Last 24 Hours</small>
                             </div>
                             <h5 class="success">+25%</h5>
@@ -354,6 +262,15 @@
                 </div>
             </div>
 
+        </div>
+
+        <div class="modals">
+            <div id="modals_box">
+
+            </div>
+        </div>
+
+        <div class="modal-II">
         </div>
 
     </div>
