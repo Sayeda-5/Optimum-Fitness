@@ -6,6 +6,7 @@ for (let i = 0; i <= getToggle.length; i++) {
     });
 }
 
+<<<<<<< HEAD
 aboutus=document.querySelector("#aboutus")
 drop=document.querySelector("#drop")
 let ss=0
@@ -20,5 +21,11 @@ aboutus.addEventListener("click",()=>{
         drop.style.display="none"
     }
 })
+=======
+let username = document.getElementById("username")
+username.innerText = localStorage.getItem("username")
+>>>>>>> b345f981dfe9fdc664d14f4bc2f49cac0c9a22e9
 
+let username_img = document.getElementById("userImage")
+username_img.src = localStorage.getItem("userImage")
 

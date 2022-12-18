@@ -51,11 +51,21 @@ form.addEventListener("submit", async (e) => {
       for (let i of data) {
         if (i.username !== username) continue;
 
+        localStorage.setItem('userImage',i.avatar);
+
         if (i.password === password) count++;
       }
 
       if (count) {
-        alert(`you have been successfully signed up`);
+        alert(`you have been successfully logged in`);
+
+        if(username=="UjjwalS" || username=="Retsudan"){
+          localStorage.setItem('adminName',username);
+          window.location.href="../admin/admin.html";
+        }else{
+          localStorage.setItem('username',username);
+          window.location.href="../Envious-society-6497/sidebar.html"
+        }
       } else {
         alert(`username and password doesn't match`);
       }
