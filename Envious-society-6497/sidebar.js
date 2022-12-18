@@ -6,5 +6,9 @@ for (let i = 0; i <= getToggle.length; i++) {
     });
 }
 
+let username = document.getElementById("username")
+username.innerText = localStorage.getItem("username")
 
+let username_img = document.getElementById("userImage")
+username_img.src = localStorage.getItem("userImage")
 
